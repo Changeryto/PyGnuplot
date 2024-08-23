@@ -31,6 +31,7 @@ import sys
 from subprocess import PIPE, Popen
 from threading import Thread
 from time import sleep
+from gnuplot_install_comprobation import verify_gnuplot_installation
 
 try:
     from queue import Queue, Empty  # Python 3.x
@@ -38,6 +39,9 @@ except ImportError:
     from Queue import Queue, Empty  # Python 2.x
 
 ON_POSIX = 'posix' in sys.builtin_module_names
+
+# See if Gnuplot is installed
+verify_gnuplot_installation()
 
 
 class gp(object):
