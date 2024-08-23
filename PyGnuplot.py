@@ -31,6 +31,7 @@ import sys
 from subprocess import PIPE, Popen
 from threading import Thread
 from time import sleep
+from gnuplot_install_comprobation import verify_gnuplot_installation
 
 try:
     from queue import Queue, Empty  # Python 3.x
@@ -46,6 +47,9 @@ class gp(object):
         f1 = gp(r"C:\Program Files\gnuplot\bin\gnuplot.exe")
         pi = f1.a('print pi')
     """
+
+    # See if Gnuplot is installed
+    verify_gnuplot_installation()
 
     def __init__(self, gnuplot_address='gnuplot'):
         # also also initialize with gnuplot_address = r"C:\Program Files\gnuplot\bin\gnuplot.exe"
