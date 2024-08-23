@@ -241,7 +241,6 @@ if __name__ == '__main__':
     f1.a('replot y(x)')
     dat_s = f1.m_str([x, y], delimiter='\t')
     print()
-    print("fitting function is: " + func)
+    print(f"fitting function is: {func}")
     print("fit report:")
-    for line in report:
-        print(line)
+    [print(line) for line in report]
