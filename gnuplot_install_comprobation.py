@@ -17,4 +17,4 @@ def verify_gnuplot_installation():
 if __name__ == "__main__":
     # test
     verify_gnuplot_installation()
-    raise UninstalledGnuplotException
+    #raise UninstalledGnuplotException
