@@ -40,6 +40,9 @@ except ImportError:
 
 ON_POSIX = 'posix' in sys.builtin_module_names
 
+# See if Gnuplot is installed
+verify_gnuplot_installation()
+
 
 class gp(object):
     """PyGnuplot object figure
